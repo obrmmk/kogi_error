@@ -1,5 +1,5 @@
 
 - ```.json```:エラー以外も含むkogiのログ
-- ```_date_line_emsg.csv```：date（日付・時間）,line（エラーが発生した行）,emsg（エラーメッセージ）
-- ```_line_emsg.csv```：line（エラーが発生した行）,emsg（エラーメッセージ）
+- ```_date_line_emsg.csv```：エラーログデータ 重複あり （date,line,emsg)
+- ```_line_emsg.csv```：エラーログデータ 重複なし （line,emsg)
 - ```_freq_emsg.csv```：emsgの出現頻度
