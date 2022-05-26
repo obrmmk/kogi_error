@@ -1,7 +1,6 @@
 '''
- 以下のColabで取得したjsonに対する処理
+以下のColabで取得したjsonに対する処理
 https://colab.research.google.com/drive/1bPdUCpLss0_cXqPYFAcPjWiP_w_d8dt8?usp=sharing
-
 '''
 
 import json
@@ -38,15 +37,20 @@ def line_emsg(df_error):
     df_line_emsg = df_error.loc[:,['date', 'line', 'emsg']].sort_values('date')
     return df_line_emsg 
 
+
+# {datetime_info}_date_line_emsg.csv：エラーログデータ - 重複あり （date, line, emsg)
 def date_line_emsg(df_line_emsg):
     df_date_line_emsg= df_line_emsg.reset_index().drop('index',axis=1)
     df_date_line_emsg.to_csv(PATH+f'{datetime_info}_date_line_emsg.csv', index=True)
 
+# {datetime_info}_line_emsg.csv：エラーログデータ - 重複なし （line, emsg)
 def line_emsg_drop(df_line_emsg):
     df_line_emsg_drop = df_line_emsg.drop_duplicates(subset='emsg')
     df_line_emsg_drop = df_line_emsg_drop.loc[:,['line', 'emsg']].reset_index().drop('index',axis=1)
     df_line_emsg_drop.to_csv(PATH+f'{datetime_info}_line_emsg.csv', index=True)
 
+
+# {datetime_info}_freq_emsg.csv：emsgの出現頻度 （emsg, freq）
 def freq(df_line_emsg):
     df_freq = pd.DataFrame(df_line_emsg.value_counts('emsg')).reset_index().set_axis(['emsg', 'freq'], axis=1)
     df_freq.to_csv(PATH+f'{datetime_info}_freq_emsg.csv')
