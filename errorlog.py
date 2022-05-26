@@ -55,7 +55,7 @@ def freq(df_line_emsg):
     df_freq = pd.DataFrame(df_line_emsg.value_counts('emsg')).reset_index().set_axis(['emsg', 'freq'], axis=1)
     df_freq.to_csv(PATH+f'{datetime_info}_freq_emsg.csv')
 
-def main():
+if __name__ == '__main__':
     
     # subpro(['mkdir', f'log/{datetime_info}'])
     # subpro(['mv', FILE_NAME, PATH])
@@ -64,5 +64,3 @@ def main():
     date_line_emsg(df_line_emsg)
     line_emsg_drop(df_line_emsg)
     freq(df_line_emsg)
-
-main()
