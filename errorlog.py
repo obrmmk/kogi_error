@@ -1,3 +1,9 @@
+'''
+ 以下のColabで取得したjsonに対する処理
+https://colab.research.google.com/drive/1bPdUCpLss0_cXqPYFAcPjWiP_w_d8dt8?usp=sharing
+
+'''
+
 import json
 import pandas as pd
 from numpy import NaN
