@@ -1,0 +1,165 @@
+ImportError: cannot import name A from B C<sep>from C import KNeighborsRegressor	import元が異なる<sep>from sklearn.neighbors import KNeighborsRegressorでimportする
+ValueError: A() arg not in range(B)<sep>ss.append(chr(a)) # リストに追加	chr()の引数は16進数110000までしか入れられない<sep>chr()の引数を見直す
+KeyError: A<sep>df['A'].describe	データフレームdfに列'A'が見つからない<sep>列名あるいはデータフレーム名を確認して直す
+KeyError: (A, B)<sep>X = df['kcal','B']	カラム名は1つしか指定できない<sep>2つ以上のカラムを取り出したい時には、二重括弧を使う
+"KeyError: ""A not found in axis""<sep>df.drop('A', axis=1, inplace=True)"	データフレームdfに列'A'が見つからない<sep>列名あるいはデータフレーム名を確認して直す
+AttributeError: A object has no attribute B<sep>x = x.B(-1, 1) # sklearn 用に変形	xはリストだからBは使えない<sep>x = np.array(x) で配列にしてから使う
+ValueError: invalid literal for A() with base B: C<sep>N=int(input())	'C'はint型に変換できない<sep>int(input())をfloat(input())に直す
+ImportError: cannot import name A from B C<sep>from C import RandomForestRegresso	RandomForestRegressoはスペルミス<sep>RandomForestRegressoをRandomForestRegressorに直す
+ValueError: invalid literal for A() with base B: C<sep>X=int(input())	複数の入力データを読み込めない<sep>int(input())をmap(int,input().split())に直す
+TypeError: A object is not callable<sep>mean_As.append(mean_A(s1))	Aのindexは()で指定できない<sep>mean_A1[s1]に直す
+NameError: name A is not defined<sep>A=A[1:]	Aが見つからない<sep>A=...のようにリスト型か文字列を定義する
+ValueError: A() arg is an empty sequence<sep>print(a.index(A(a)))	リストaの中身は空<sep>変数aを見直す
+FileNotFoundError: A No such file or directory: B<sep>X_train_numa_p = pd.read_csv('~/Desktop/OJT/numa-chan/train_Numa_print.csv')	/root/Desktop/OJT/numa-chan/train_Numa_print.csvが見つからない<sep>ファイルのダウンロードし、ファイル名やファイルパスを確認をする
+TypeError: A is an invalid key<sep>X = df[[column],['低所得率']]  # ひとつ選ぶ	複数列を指定する際の個々の[]は不要<sep>df[[列名1,列名2,...]]にする
+TypeError: A() got multiple values for argument B<sep>plt.B(df[column], df['G3'], bins=20)	引数が2つある<sep>plt.B(df['G3'], bins=20) のように1つにする
+TypeError: A not supported between instances of B and C<sep>if KCS:	int型とstr型で比較演算子は使えない<sep>型を揃えて比較する
+ValueError: Expected 2D array, got 1D array instead:Aarray=B.CReshape your data either using array.reshape(-D, E) if your data has a single feature or array.reshape(F, -G) if it contains a single sample.<sep>model.fit(x, y)	sklearnのfit()では、DataFrame型やnumpyの行列形式（縦ベクトル）しか使用できない<sep>二重括弧をつけるか、reshape(-1,1)をつける
+NameError: name A is not defined<sep>A	データフレームAが見つからない<sep>データフレーム名を確認して直すか、新たにデータフレームを作る
+ValueError: Expected 2D array, got 1D array instead:Aarray=B.CReshape your data either using array.reshape(-D, E) if your data has a single feature or array.reshape(F, -G) if it contains a single sample.<sep>model.fit(X, y)	sklearnのfit()では、DataFrame型やnumpyの行列形式（縦ベクトル）しか使用できない<sep>二重括弧をつけるか、reshape(-1,1)をつける
+NameError: name A is not defined<sep>A(1)	mathモジュールを使っていない<sep>import mathして、math.A()と書く
+NameError: name A is not defined<sep>N[0] = A	変数Aが見つからない<sep>A=...のように定義する
+"UsageError: Cell magic A not found.<sep>get_ipython().run_cell_magic('atcuder', 'https://atcoder.jp/contests/abc228/tasks/abc228_a', ""S,T,X = map(int,input().split())\nif S  in X:\n    print('Yes')\nelse:\n    print('No')"")"	%%atcoderのスペルが違う<sep>%%atcuderを%%atcoderに直す
+ValueError: invalid literal for A() with base B: C<sep>x=int(input())	'1 1 7 2'はint型に変換できない<sep>int(input())をmap(int,input().split())に直す
+NameError: name A is not defined<sep>df[['アルコール','パリピ']],A()	Aが定義されていない<sep>メソッドの呼び出し方とスペルを確認する
+NameError: name A is not defined<sep>A	データフレームAが見つからない<sep>データフレーム名を確認して直すか、新たにデータフレームを作る
+NameError: name A is not defined<sep>A	変数Aが見つからない<sep>A=...のように定義する
+ValueError: Found input variables with inconsistent numbers of samples: A<sep>print('R2(テスト):', r2_score(y_test, y_pred))	y_testとy_predのデータの個数が異なる<sep>len(データフレーム名[列名])でそれぞれのデータの個数を確認する
+"KeyError: ""A not in index""<sep>X = df[['A','気温']]  # 価格以外を全て説明変数に"	データフレームdfに列'A'が見つからない<sep>列名あるいはデータフレーム名を確認して直す
+ValueError: invalid literal for A() with base B: C<sep>print(int(x))	'C'はint型に変換できない<sep>print(int(x))をprint(x)に直す
+ValueError: Found input variables with inconsistent numbers of samples: A<sep>model.fit(X_train, y)	X_trainとyのデータの個数が異なる<sep>len(データフレーム名[列名])でそれぞれのデータの個数を確認する
+"KeyError: ""None of A are in the B""<sep>X = df[['df_week','kacl']]"	データフレームdfに列'df_week', 'kacl'が見つからない<sep>列名あるいはデータフレーム名を確認して直す
+NameError: name A is not defined<sep>plt.scatter(A['y'],['week'])	データフレームAが見つからない<sep>データフレーム名を確認して直すか、新たにデータフレームを作る
+KeyError: (A, B, C)<sep>X = df['soldout','kcal','C']  # 価格以外を全て説明変数に	カラム名は1つしか指定できない<sep>2つ以上のカラムを取り出したい時には、二重括弧を使う
+"KeyError: ""None of A are in the B""<sep>X = df[['precioitation_num']]"	データフレームdfに列'precioitation_num'が見つからない<sep>列名あるいはデータフレーム名を確認して直す
+KeyError: A<sep>plt.hist(df['A'])	データフレームdfに列'A'が見つからない<sep>列名あるいはデータフレーム名を確認して直す
+"KeyError: ""None of A are in the B""<sep>X = df[['通勤時間', '教員']]  # 説明変数"	データフレームdfに列'通勤時間', '教員'が見つからない<sep>列名あるいはデータフレーム名を確認して直す
+NameError: name A is not defined<sep>df(A)	データフレーム型に対してAの使い方が異なる<sep>df.A()に直す
+ValueError: invalid literal for A() with base B: C<sep>tC=int('C',n)	文字列'C'はint型に変換できない<sep>tC=int('C',n)をtC='C'に直す
+AttributeError: A object has no attribute B<sep>model.feauture_importance_	importances_のスペルが違う<sep>importance_をimportances_に直す
+"NameError: name A is not defined<sep>print(""MSE: "", mean_squared_error(A,y_pred))"	変数Aが見つからない<sep>A=...のように定義する
+TypeError: A() takes B positional arguments but C were given<sep>mean_list_all = make_mean_list(sample_list, df_keys['keys'],df_keys)	関数 make_mean_list() は2つしか引数を取らないが、Cつ入れてしまっている<sep>引数を2つにする
+ValueError: Expected 2D array, got 1D array instead:Aarray=B.CReshape your data either using array.reshape(-D, E) if your data has a single feature or array.reshape(F, -G) if it contains a single sample.<sep>model.fit(X, y)	sklearnのfit()では、DataFrame型やnumpyの行列形式（縦ベクトル）しか使用できない<sep>二重括弧をつけるか、reshape(-1,1)をつける
+AttributeError: A object has no attribute B<sep>A.add(x[2:])	B型にaddは使用できない<sep>A[キー] = 要素でB型に要素を追加できる
+ValueError: Expected 2D array, got 1D array instead:Aarray=B.CReshape your data either using array.reshape(-D, E) if your data has a single feature or array.reshape(F, -G) if it contains a single sample.<sep>model.fit(X, y)	sklearnのfit()では、DataFrame型やnumpyの行列形式（縦ベクトル）しか使用できない<sep>二重括弧をつけるか、reshape(-C,C)をつける
+NameError: name A is not defined<sep>for i in range(min(len(A),len(B))):	変数Aが見つからない<sep>A=...のように定義する
+"KeyError: ""A not in index""<sep>X = df[['A', '低所得率']]  # 説明変数　二つ選ぶ"	データフレームdfに列'A'が見つからない<sep>列名あるいはデータフレーム名を確認して直す
+TypeError: A is an invalid key<sep>X = df[['week'],['weather'],['temperature']]  # 価格以外を全て説明変数に	複数列を指定する際の個々の[]は不要<sep>df[[列名1,列名2,...]]にする
+AttributeError: A object has no attribute B<sep>df['week'] = df['week'].fillna(df['week'].B)	.Bが違う<sep>.mean()などの数値の処理に関したメゾットにした方がいいかも。
+ValueError: could not convert string to float: A<sep>model.fit(X, y)	このデータはそのまま処理できない<sep>文字列を数値に変えるデータ前処理を行う
+"KeyError: ""None of A are in the B""<sep>X = df[['資産']]  # ひとつ選ぶ"	データフレームdfに列'資産'が見つからない<sep>列名あるいはデータフレーム名を確認して直す
+ValueError: could not convert string to float: A<sep>model.fit(X, y)	文字列を数値に変えないと処理できない<sep>文字列を数値に変えるデータ前処理を行う
+ModuleNotFoundError: No module named A<sep>from A.tokenizer import Tokenizer	Aという名前のモジュールが見つからない<sep>モジュールをimportする、もしくはモジュールの名前を確認する
+UsageError: Cell magic A not found.<sep>get_ipython().run_cell_magic('atcorder', 'https://atcoder.jp/contests/abc233/tasks/abc233_a', 'X, Y= map(str, input().split())\nwhile X<Y:\n    X+=10')	%%atcoderのスペルが違う<sep>%%atcorderを%%atcoderに直す
+ValueError: invalid literal for A() with base B: C<sep>s=s+[list(map(int,input().split()))]	'##..'はint型に変換できない<sep>入力データを見直す
+TypeError: A() takes exactly one argument (B given)<sep>k_l[B].append()	appendするものがない<sep>append(追加するもの)にする
+NameError: name A is not defined<sep>A	データフレームAが見つからない<sep>データフレーム名を確認して直すか、新たにデータフレームを作る
+ValueError: could not convert string to float: A<sep>model.fit(X, y)	このデータはそのまま処理できない<sep>文字列を数値に変えるデータ前処理を行う
+ZeroDivisionError: division by zero<sep>1/0	割る数に0は使用できない<sep>割る数の値を0以外に変更する
+UsageError: Cell magic A not found.<sep>get_ipython().run_cell_magic('aycoder', 'abc149_a', 'S,T=map(int,input().split())\nprint(T+S)')	%%atcoderのスペルが違う<sep>%%aycoderを%%atcoderに直す
+"ValueError: Found input variables with inconsistent numbers of samples: A<sep>print(""MSE: "", mean_squared_error(y, y_pred))"	yとy_predのデータの個数が異なる<sep>len(データフレーム名[列名])でそれぞれのデータの個数を確認する
+NameError: name A is not defined<sep>A.info()	データフレームAが見つからない<sep>データフレーム名を確認して直すか、新たにデータフレームを作る
+TypeError: A is an invalid key<sep>X = df[[column],[column1]] # 説明変数	複数列を指定する際の個々の[]は不要<sep>df[[列名1,列名2,...]]にする
+KeyError: A<sep>y = df['A']	データフレームdfに列'A'が見つからない<sep>列名あるいはデータフレーム名を確認して直す
+ImportError: cannot import name A from B C<sep>from C import PolynomialFeatures	import元が異なる<sep>from sklearn.preprocessing import PolynomialFeaturesでimportする
+TypeError: A() argument must be a string, a bytes-like object or a number, not B<sep>N = int(input)	()が不足している<sep>int(input())に直す
+AttributeError: A object has no attribute B<sep>df['kcal'].B()	Bのスペルが違う<sep>Bをdescribe に直す
+KeyError: A<sep>y = df['A']	データフレームdfに列'A'が見つからない<sep>列名あるいはデータフレーム名を確認して直す
+TypeError: A is an invalid key<sep>X = df[A]  # ひとつ選ぶ	複数列を指定する際の個々の[]は不要<sep>df[[列名1,列名2,...]]にする
+AttributeError: A object has no attribute B<sep>df.isnull.sum()	isnullの後ろに()がない<sep>df.isnull().sum()に直す
+KeyError: A<sep>sns.kdeplot(df.groupby('A').get_group('1')['G3'], shade = True, label = '1')	データフレームdfに列'A'が見つからない<sep>列名あるいはデータフレーム名を確認して直す
+TypeError: list expected at most A arguments, got B<sep>S =list(str, input())	listに型を引数として渡すことはできない<sep>入力が１つであれば、list(input())、複数であればlist(input().split())と書く
+NameError: name A is not defined<sep>print(A)	変数ansgdが見つからない<sep>ansgd=...のように定義する
+KeyError: A<sep>plt.scatter(df['payday'], df['A'])	データフレームdfに列'A'が見つからない<sep>列名あるいはデータフレーム名を確認して直す
+FileNotFoundError: A No such file or directory: B<sep>df = pd.read_csv('bento.csv')	bento.csvが見つからない<sep>ファイルのダウンロードし、ファイル名やファイルパスを確認をする
+FileNotFoundError: A No such file or directory: B<sep>X_train_numa_p = pd.read_csv('drive/my-drive/nuna-chan/train_Numa_print.csv')	drive/my-drive/nuna-chan/train_Numa_print.csvが見つからない<sep>ファイルのダウンロードし、ファイル名やファイルパスを確認をする
+ValueError: num must be A <= num <= B, not C<sep>plt.subplot(2,1,C)	subplotでCは存在しない<sep>1から2になるようにする
+FileNotFoundError: A No such file or directory: B<sep>df = pd.read_csv('ja.csv')	ja.csvが見つからない<sep>ファイルのダウンロードし、ファイル名やファイルパスを確認をする
+NameError: name A is not defined<sep>A	変数Aが見つからない<sep>A=...のように定義する
+NameError: name A is not defined<sep>print(f'{A}決定係数(R2):', r2)	変数Aが見つからない<sep>Aを定義するまたはcolumnに直す
+NameError: name A is not defined<sep>print(A.array(scores).mean())	numpyをAとしてimportしていない<sep>import numpy as Aする
+NameError: name A is not defined<sep>a=[A,B,A,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z]	変数Aが見つからない<sep>A=...のように定義する
+"KeyError: ""A not in index""<sep>X = df[['通勤', 'A']]  # 説明変数"	データフレームdfに列'A'が見つからない<sep>列名あるいはデータフレーム名を確認して直す
+NameError: name A is not defined<sep>model = A()	'A'のスペルが違う<sep>Arする
+NameError: name A is not defined<sep>data_sep(A)	変数Aが見つからない<sep>A=...のように定義する
+NameError: name A is not defined<sep>a<=A<=b	変数Aが見つからない<sep>A=...のように定義する
+ValueError: Input contains NaN, infinity or a value too large for dtype(A).<sep>model.fit(X_train, y_train)	NANやinfが含まれている<sep>指定した列を確認する
+"UsageError: Cell magic A not found.<sep>get_ipython().run_cell_magic('arcoder', 'https://atcoder.jp/contests/abc149/tasks/abc149_a', ""S,T=map(str, input().split())\nprint(f'{S}{T}')"")"	%%atcoderのスペルが違う<sep>%%arcoderを%%atcoderに直す
+NameError: name A is not defined<sep>for key in A:	Aが見つからない<sep>Aを定義する
+NameError: name A is not defined<sep>A	変数Aが見つからない<sep>A=...のように定義する
+TypeError: A object cannot be interpreted as an integer<sep>for _ in range(num):	numはA型なため使用できない<sep>numの型を見直して、定義する
+TypeError: A is an invalid key<sep>X = df[['kcal'],['temperature']]  # 価格以外を全て説明変数に	複数列を指定する際の個々の[]は不要<sep>df[[列名1,列名2,...]]にする
+NameError: name A is not defined<sep>df.groupby('兄弟姉妹')[A].describe()	変数Aが見つからない<sep>A=...のように定義する
+TypeError: A is an invalid key<sep>X = df[['week'],['weather'],['kcal']]	複数列を指定する際の個々の[]は不要<sep>df[[列名1,列名2,...]]にする
+ValueError: Input contains NaN, infinity or a value too large for dtype(A).<sep>model.fit(X_train, y_train)	NANやinfが含まれている<sep>指定した列を確認する
+ValueError: invalid literal for A() with base B: C<sep>A,B=map(int, input().split())	区切り文字の設定が','になっていない<sep>map(int,input().split())をmap(int,input().split(','))に直す
+NameError: name A is not defined<sep>r2 = A(y, y_pred)	scikit-learnの関数Aが見つからない<sep>from sklearn.metrics import A する
+TypeError: can only concatenate str (not A) to str<sep>ss[i]=ss[i]+[s[i+j]]	文字列とリストの演算はできない<sep>型を揃えて演算する
+NameError: name A is not defined<sep>print(A)	変数Aが見つからない<sep>A=...のように定義する
+AttributeError: A object has no attribute B<sep>for B2 in df.B[:-1]:	データフレームには'B'という要素はない<sep>df.B[:-1]:をdf.Bs[:-1]:に直す
+NameError: name A is not defined<sep>df=A	Aが見つからない<sep>A=...のように定義する
+AttributeError: A object has no attribute B<sep>model.B	importances_のスペルが違う<sep>importences_をimportances_に直す
+"KeyError: ""A not found in axis""<sep>df.drop('A', axis=1, inplace=True)"	Aはタイプミス<sep>remarksに直す
+NameError: name A is not defined<sep>if x[i]==A[i]:	リストAが見つからない<sep>Aを定義する
+NameError: name A is not defined<sep>A(a,c)	printのスペルが違う<sep>printに直す
+UsageError: Line magic function A not found.<sep>get_ipython().magic('kogi https://atcoder.jp/contests/abc226/tasks/abc226_c')	%が一つしかない<sep>%% atcoder URLにする
+TypeError: A object is not subscriptable<sep>x = np.array[1,2,2,4,6,7]	()が不足している<sep>np.array(リスト)にする
+KeyError: A<sep>keys_list(df_key['keys'][A])	indexが見つからない<sep>範囲を確認し、indexを調節する
+FileNotFoundError: A No such file or directory: B<sep>X_train_numa_p = pd.read_csv('drive/MyDrive/numa-chan/train_Numa_print.csv')	drive/MyDrive/numa-chan/train_Numa_print.csv見つからない<sep>ファイルのダウンロードし、ファイル名やファイルパスを確認をする
+TypeError: cannot unpack non-iterable int object<sep>n, j = 0	2つの変数に対して、1つの値しかない<sep>nとjのそれぞれの値を代入する
+NameError: name A is not defined<sep>A['week'].value_counts()	データフレームAが見つからない<sep>データフレーム名を確認して直すか、新たにデータフレームを作る
+KeyError: A<sep>X = df['A']  # ひとつ選ぶ	データフレームdfに列'A'が見つからない<sep>列名あるいはデータフレーム名を確認して直す
+"KeyError: ""None of A are in the B""<sep>X=df[['学校']]"	データフレームdfに列'学校'が見つからない<sep>列名あるいはデータフレーム名を確認して直す
+ValueError: With n_samples=A, test_size=B and train_size=None, the resulting train set will be empty. Adjust any of the aforementioned parameters.<sep>X_train_all_name, X_test_all_name = train_test_split(df_all_name,test_size = B)	データの読み込みができていない<sep>データを読み込んでいるコードを確認する
+NameError: name A is not defined<sep>r2 = A(y, y_pred)	scoreのスペルが違う<sep>scoreに直す
+ValueError: Expected 2D array, got 1D array instead:Aarray=B.CReshape your data either using array.reshape(-D, E) if your data has a single feature or array.reshape(F, -G) if it contains a single sample.<sep>model.fit(x, y)	sklearnのfit()では、DataFrame型やnumpyの行列形式（縦ベクトル）しか使用できない<sep>二重括弧をつけるか、reshape(-1,1)をつける
+ValueError: invalid literal for A() with base B: C<sep>X=int(input())	複数の入力データを読み込めない<sep>map(int,input().split())に直す
+ValueError: invalid literal for A() with base B: C<sep>K,S=map(int, input().split())	'C'はint型に変換できない<sep>map(int,input().split())をmap(input().split(','))に直す
+ValueError: Expected 2D array, got scalar array instead:Aarray=BC      D      E      F      G      ..HI    J    K    L    M    N week, Length: O, dtype: object>.PReshape your data either using array.reshape(-Q, R) if your data has a single feature or array.reshape(S, -T) if it contains a single sample.<sep>model.fit(X, y)	sklearnのfit()では、DataFrame型やnumpyの行列形式（縦ベクトル）しか使用できない<sep>二重括弧をつけるか、reshape(-1,1)をつける
+NameError: name A is not defined<sep>sx,sy,gx,gy = map(A,input().strip().split())	intのスペルが違う<sep>intに直す
+KeyError: (A, B)<sep>X = df['通勤','B']	カラム名は1つしか指定できない<sep>2つ以上のカラムを取り出したい時には、二重括弧を使う
+NameError: name A is not defined<sep>print(A)	変数Aが見つからない<sep>A=...のように定義する
+ValueError: invalid literal for A() with base B: C<sep>s,t=map(int,input().split())	文字列'tanaka'はint型に変換できない<sep>map(int,input().split())をmap(input().split())に直す
+AttributeError: A object has no attribute B<sep>model.B	featureとimportances_のスペルが違う<sep>featrueをfeatureに、importanceをimportances_に直す
+ValueError: invalid literal for A() with base B: C<sep>n,m=map(int,input())	map関数を用いているが入力データが1つしかない<sep>2つの値を入力する
+KeyError: A<sep>y = df['A']	データフレームdfに列'A'が見つからない<sep>列名あるいはデータフレーム名を確認して直す
+TypeError: A() got an unexpected keyword argument B<sep>plt.figure(figsiza = (6,6))	figureではグラフのサイズを指定できない<sep>plt.figure(figsize=...)に直す
+ValueError: invalid literal for A() with base B: C<sep>N,A,X,Y=int(input())	'C'はint型に変換できない<sep>int(input())をmap(int,input().split())に直す
+TypeError: max expected A arguments, got B<sep>bb=b[b.index[max()]]	max()の引数がない<sep>max()に引数を与える
+NameError: name A is not defined<sep>x = A(input())	floatのスペルが違う<sep>floatに直す
+FileNotFoundError: A No such file or directory: B<sep>X_train_numa_p = pd.read_csv('B')	Bが見つからない<sep>ファイルのダウンロードし、ファイル名やファイルパスを確認をする
+ValueError: empty separator<sep>str(223).split('')	区切り文字が指定されていない<sep>空白区切りにするなら、.split(' ')のように空白を区切り文字として指定する
+"KeyError: ""A not found in axis""<sep>df.drop('A', axis=1, inplace=True)"	データフレームdfにA列が見つからない<sep>データフレームまたは列名を見直す
+ValueError: operands could not be broadcast together with shapes (A,) (B,) <sep>pred_sub = y - y_pred_L	yとy_pred_Lのデータの個数が異なる<sep>データの個数を揃えてから、演算する
+TypeError: unsupported operand type(s) for ** or A(): B and C<sep>x=A**b	Aが文字列型になっている<sep>Aの型を数値型にする
+TypeError: bad operand type for unary +: A<sep>print(s[k-1],+'...')	文字列を連結する際に,がある<sep>print(文字列1+文字列2)のようにする
+NameError: name A is not defined<sep>A.scatter(df['部屋数'], df['住宅価格'])	matplotlibがimportしていない<sep>import matplotlib.pyplot as AでAとしてimportする
+TypeError: must be real number, not function<sep>print(ceil(a))	mathモジュールを使っていない<sep>import mathして、math.ceil()と書く
+"KeyError: ""A not in index""<sep>df[['kcal','weather_num','tempreture']]"	データフレームdfに列'weather_num', 'tempreture'が見つからない<sep>列名あるいはデータフレーム名を確認して直す
+NameError: name A is not defined<sep>sample_list = A	変数Aが見つからない<sep>A=...のように定義する
+AttributeError: A object has no attribute B<sep>plt.barh(X_train.columns[:-1], model.A)	Aの()が不足している<sep>A()を付ける
+"ValueError: A is not in list<sep>if mylist.index(""A"")==1 and mylist.index(""AR"")==1 and mylist.index(""2B"")==1:"	A'はリストに存在しない<sep>リストの中身を見直す
+ValueError: invalid literal for A() with base B: C<sep>Sx,Sy,Gx,Gy=map(int, input().split())	入力データに文字列が含まれている<sep>入力データを見直しましょう
+NameError: name A is not defined<sep>print(A)	変数Aが見つからない<sep>A=...のように定義する
+ValueError: not enough values to unpack (expected A, got B)<sep>A,B=map(int,input().split())	入力した値を入れる変数は2個あるけど、実際にはB個しか入力されていない<sep>入力を2個に増やすか、変数をB個に減らそう
+TypeError: A() argument must be a string or a number, not B<sep>x=B(input().split())	1つの変数に対してsplit()は不要<sep>入力に合うようにリストにするまたはsplit()を無くす
+KeyError: A<sep>X = df['A'] #一つ選ぶ	データフレームdfに列'A'が見つからない<sep>列名あるいはデータフレーム名を確認して直す
+KeyError: A<sep>df.head(df['A'])	データフレームdfに列'name'が見つからない<sep>列名あるいはデータフレーム名を確認して直す
+NameError: name A is not defined<sep>model = A()	Aが見つからない<sep>from sklearn.tree import AしてAと書く
+AttributeError: A object has no attribute B<sep>N=S.remove(0,2)	Sは文字列のためremoveできない<sep>S.Bip('取り除く文字列')にする
+AttributeError: A object has no attribute B<sep>y_pred = model.predect(X)	predictのスペルが違う<sep>predectをpredictに直す
+NameError: name A is not defined<sep>A	データフレームAが見つからない<sep>データフレーム名を確認して直すか、新たにデータフレームを作る
+AttributeError: A object attribute B is read-only<sep>S.replace=(S[1],S[2])	リストの番号で指定できない<sep>S = [S[1],S[0]] + S[2:] に直す
+KeyError: A<sep>y = df['A']	データフレームdfに列'A'が見つからない<sep>列名あるいはデータフレーム名を確認して直す
+TypeError: A() got an unexpected keyword argument B<sep>plt.figure(figure=(6,6))	figureではグラフのサイズを指定できない<sep>plt.figure(figsize=...)に直す
+NameError: name A is not defined<sep>model=A()	LinearRegressionのスペルが違う<sep>AをLinearRegressionに直す
+NameError: name A is not defined<sep>vec = model.fit_transform(A)	変数Aが見つからない<sep>A=...のように定義する
+NameError: name A is not defined<sep>A(0)	printのスペルが違う<sep>printに直す
+AttributeError: A object has no attribute B<sep>a = input().sprit()	splitのスペルが違う<sep>splitに直す
+"KeyError: ""A not in index""<sep>X = df[['部屋数','低所得率','A']]"	データフレームdfに列'A'が見つからない<sep>列名あるいはデータフレーム名を確認して直す
+AttributeError: type object A has no attribute B<sep>x=B.input()	Bの使い方が違う<sep>B(input())に直す
+AttributeError: A object has no attribute B<sep>df.B()	列名が指定されていない<sep>df['列名'].B()
+AttributeError: A object has no attribute B<sep>model.B	featureのスペルが違う<sep>featrueをfeatureに直す
+TypeError: A is an invalid key<sep>X = df[['week'],['weathere'],['kcal']]	複数列を指定する際の個々の[]は不要<sep>df[[列名1,列名2,...]]にする
+TypeError: A() got an unexpected keyword argument B<sep>model = LinearRegression(max_depth=3)	LinearRegressionではmax_depthを使用できない<sep>モデルの見直しをする
+NameError: name A is not defined<sep>A(モデル, X, y, cv=5, scoring='r2')	Aをimportしていない<sep>from sklearn.model_selection import Aする
