@@ -1,0 +1,165 @@
+ImportError: cannot import name 'KNeighborsRegressor' from 'sklearn.ensemble' (/usr/local/lib/python3.7/dist-packages/sklearn/ensemble/__init__.py)<tab>from sklearn.ensemble import KNeighborsRegressor	import元が異なる<tab>from sklearn.neighbors import KNeighborsRegressorでimportする
+ValueError: chr() arg not in range(0x110000)<tab>ss.append(chr(a)) # リストに追加	chr()の引数は16進数110000までしか入れられない<tab>chr()の引数を見直す
+KeyError: 'kal'<tab>df['kal'].describe	データフレームdfに列'kal'が見つからない<tab>列名あるいはデータフレーム名を確認して直す
+KeyError: ('kcal', 'tempreature')<tab>X = df['kcal','tempreature']	カラム名は1つしか指定できない<tab>2つ以上のカラムを取り出したい時には、二重括弧を使う
+"KeyError: ""['string'] not found in axis""<tab>df.drop('string', axis=1, inplace=True)"	データフレームdfに列'string'が見つからない<tab>列名あるいはデータフレーム名を確認して直す
+AttributeError: 'list' object has no attribute 'reshape'<tab>x = x.reshape(-1, 1) # sklearn 用に変形	xはリストだからreshapeは使えない<tab>x = np.array(x) で配列にしてから使う
+ValueError: invalid literal for int() with base 10: '99.9'<tab>N=int(input())	'99.9'はint型に変換できない<tab>int(input())をfloat(input())に直す
+ImportError: cannot import name 'RandomForestRegresso' from 'sklearn.ensemble' (/usr/local/lib/python3.7/dist-packages/sklearn/ensemble/__init__.py)<tab>from sklearn.ensemble import RandomForestRegresso	RandomForestRegressoはスペルミス<tab>RandomForestRegressoをRandomForestRegressorに直す
+ValueError: invalid literal for int() with base 10: '3 7'<tab>X=int(input())	複数の入力データを読み込めない<tab>int(input())をmap(int,input().split())に直す
+TypeError: 'list' object is not callable<tab>mean_lists.append(mean_list(s1))	listのindexは()で指定できない<tab>mean_list1[s1]に直す
+NameError: name 'string' is not defined<tab>A=string[1:]	stringが見つからない<tab>string=...のようにリスト型か文字列を定義する
+ValueError: max() arg is an empty sequence<tab>print(a.index(max(a)))	リストaの中身は空<tab>変数aを見直す
+FileNotFoundError: [Errno 2] No such file or directory: '/root/Desktop/OJT/numa-chan/train_Numa_print.csv'<tab>X_train_numa_p = pd.read_csv('~/Desktop/OJT/numa-chan/train_Numa_print.csv')	/root/Desktop/OJT/numa-chan/train_Numa_print.csvが見つからない<tab>ファイルのダウンロードし、ファイル名やファイルパスを確認をする
+TypeError: '(['犯罪率'], ['低所得率'])' is an invalid key<tab>X = df[[column],['低所得率']]  # ひとつ選ぶ	複数列を指定する際の個々の[]は不要<tab>df[[列名1,列名2,...]]にする
+TypeError: hist() got multiple values for argument 'bins'<tab>plt.hist(df[column], df['G3'], bins=20)	引数が2つある<tab>plt.hist(df['G3'], bins=20) のように1つにする
+TypeError: '>' not supported between instances of 'int' and 'str'<tab>if K>S:	int型とstr型で比較演算子は使えない<tab>型を揃えて比較する
+ValueError: Expected 2D array, got 1D array instead:<nl>array=[1 2 2 4 6 7].<nl>Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.<tab>model.fit(x, y)	sklearnのfit()では、DataFrame型やnumpyの行列形式（縦ベクトル）しか使用できない<tab>二重括弧をつけるか、reshape(-1,1)をつける
+NameError: name 'df_uid_all' is not defined<tab>df_uid_all	データフレームdf_uid_allが見つからない<tab>データフレーム名を確認して直すか、新たにデータフレームを作る
+ValueError: Expected 2D array, got 1D array instead:<nl>array=[ 90 101 118 120 130 135 145 140 151 116 151 153 151 171 134 165 155 157<nl> 109 111 160 145 145 151 134 122 121  80 131 128 129  87 129 134 107  85<nl> 126 129 126 107  92 126 120 121 105  92 139 121 126 111  91 137 111  84<nl>  86 137  99 113  85 113 129 104 104  90  69 131 100 110  77  73 123  89<nl>  68  80  70 129  90  72 100 102  77  51  55 106  84 125  99 100  90 107<nl>  96  88  87 128  92  82  57  57  56 109  78  63  56  80  54  97  64  47<nl>  88  59  58  73  70  64  58 126  70  71 104  54  65  77  79  74  64 119<nl>  74  59  47  64  93  74  56  50  72 121  76  63  66  56  57  72  61  64<nl>  49  74  65  54  50  53  63  82  56  54  48 124  65  51  53  53  55  53<nl>  56  62  83  65  52  58  60  38  75  54  58  63 129  45  40  56  53  56<nl>  54 100  55  68  62  56  39  65  68  53  54  43  68  63  54  53 115  56<nl>  49  46  45  29  59  50  45  56  40].<nl>Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.<tab>model.fit(X, y)	sklearnのfit()では、DataFrame型やnumpyの行列形式（縦ベクトル）しか使用できない<tab>二重括弧をつけるか、reshape(-1,1)をつける
+NameError: name 'sin' is not defined<tab>sin(1)	mathモジュールを使っていない<tab>import mathして、math.sin()と書く
+NameError: name 'S' is not defined<tab>N[0] = S	変数Sが見つからない<tab>S=...のように定義する
+"UsageError: Cell magic `%%atcuder` not found.<tab>get_ipython().run_cell_magic('atcuder', 'https://atcoder.jp/contests/abc228/tasks/abc228_a', ""S,T,X = map(int,input().split())\nif S  in X:\n    print('Yes')\nelse:\n    print('No')"")"	%%atcoderのスペルが違う<tab>%%atcuderを%%atcoderに直す
+ValueError: invalid literal for int() with base 10: '1 1 7 2'<tab>x=int(input())	'1 1 7 2'はint型に変換できない<tab>int(input())をmap(int,input().split())に直す
+NameError: name 'value_counts' is not defined<tab>df[['アルコール','パリピ']],value_counts()	value_countsが定義されていない<tab>メソッドの呼び出し方とスペルを確認する
+NameError: name 'df_uid_pr' is not defined<tab>df_uid_pr	データフレームdf_uid_prが見つからない<tab>データフレーム名を確認して直すか、新たにデータフレームを作る
+NameError: name 'columns' is not defined<tab>columns	変数columnsが見つからない<tab>columns=...のように定義する
+ValueError: Found input variables with inconsistent numbers of samples: [83, 207]<tab>print('R2(テスト):', r2_score(y_test, y_pred))	y_testとy_predのデータの個数が異なる<tab>len(データフレーム名[列名])でそれぞれのデータの個数を確認する
+"KeyError: ""['完売フラグ'] not in index""<tab>X = df[['完売フラグ','気温']]  # 価格以外を全て説明変数に"	データフレームdfに列'完売フラグ'が見つからない<tab>列名あるいはデータフレーム名を確認して直す
+ValueError: invalid literal for int() with base 10: '4 3'<tab>print(int(x))	'4 3'はint型に変換できない<tab>print(int(x))をprint(x)に直す
+ValueError: Found input variables with inconsistent numbers of samples: [354, 500]<tab>model.fit(X_train, y)	X_trainとyのデータの個数が異なる<tab>len(データフレーム名[列名])でそれぞれのデータの個数を確認する
+"KeyError: ""None of [Index(['df_week', 'kacl'], dtype='object')] are in the [columns]""<tab>X = df[['df_week','kacl']]"	データフレームdfに列'df_week', 'kacl'が見つからない<tab>列名あるいはデータフレーム名を確認して直す
+NameError: name 'dfdf' is not defined<tab>plt.scatter(dfdf['y'],['week'])	データフレームdfdfが見つからない<tab>データフレーム名を確認して直すか、新たにデータフレームを作る
+KeyError: ('soldout', 'kcal', 'temperature')<tab>X = df['soldout','kcal','temperature']  # 価格以外を全て説明変数に	カラム名は1つしか指定できない<tab>2つ以上のカラムを取り出したい時には、二重括弧を使う
+"KeyError: ""None of [Index(['precioitation_num'], dtype='object')] are in the [columns]""<tab>X = df[['precioitation_num']]"	データフレームdfに列'precioitation_num'が見つからない<tab>列名あるいはデータフレーム名を確認して直す
+KeyError: '女性'<tab>plt.hist(df['女性'])	データフレームdfに列'女性'が見つからない<tab>列名あるいはデータフレーム名を確認して直す
+"KeyError: ""None of [Index(['通勤時間', '教員'], dtype='object')] are in the [columns]""<tab>X = df[['通勤時間', '教員']]  # 説明変数"	データフレームdfに列'通勤時間', '教員'が見つからない<tab>列名あるいはデータフレーム名を確認して直す
+NameError: name 'head' is not defined<tab>df(head)	データフレーム型に対してheadの使い方が異なる<tab>df.head()に直す
+ValueError: invalid literal for int() with base 2: 'a'<tab>ta=int('a',n)	文字列'a'はint型に変換できない<tab>ta=int('a',n)をta='a'に直す
+AttributeError: 'DecisionTreeRegressor' object has no attribute 'feauture_importance_'<tab>model.feauture_importance_	importances_のスペルが違う<tab>importance_をimportances_に直す
+"NameError: name 'x_test' is not defined<tab>print(""MSE: "", mean_squared_error(x_test,y_pred))"	変数x_testが見つからない<tab>x_test=...のように定義する
+TypeError: make_mean_list() takes 2 positional arguments but 3 were given<tab>mean_list_all = make_mean_list(sample_list, df_keys['keys'],df_keys)	関数 make_mean_list() は2つしか引数を取らないが、3つ入れてしまっている<tab>引数を2つにする
+ValueError: Expected 2D array, got 1D array instead:<nl>array=[6.32000e-03 2.73100e-02 2.72900e-02 3.23700e-02 6.90500e-02 2.98500e-02<nl> 8.82900e-02 1.44550e-01 2.11240e-01 1.70040e-01 2.24890e-01 1.17470e-01<nl> 9.37800e-02 6.29760e-01 6.37960e-01 6.27390e-01 1.05393e+00 7.84200e-01<nl> 8.02710e-01 7.25800e-01 1.25179e+00 8.52040e-01 1.23247e+00 9.88430e-01<nl> 7.50260e-01 8.40540e-01 6.71910e-01 9.55770e-01 7.72990e-01 1.00245e+00<nl> 1.13081e+00 1.35472e+00 1.38799e+00 1.15172e+00 1.61282e+00 6.41700e-02<nl> 9.74400e-02 8.01400e-02 1.75050e-01 2.76300e-02 3.35900e-02 1.27440e-01<nl> 1.41500e-01 1.59360e-01 1.22690e-01 1.71420e-01 1.88360e-01 2.29270e-01<nl> 2.53870e-01 2.19770e-01 8.87300e-02 4.33700e-02 5.36000e-02 4.98100e-02<nl> 1.36000e-02 1.31100e-02 2.05500e-02 1.43200e-02 1.54450e-01 1.03280e-01<nl> 1.49320e-01 1.71710e-01 1.10270e-01 1.26500e-01 1.95100e-02 3.58400e-02<nl> 4.37900e-02 5.78900e-02 1.35540e-01 1.28160e-01 8.82600e-02 1.58760e-01<nl> 9.16400e-02 1.95390e-01 7.89600e-02 9.51200e-02 1.01530e-01 8.70700e-02<nl> 5.64600e-02 8.38700e-02 4.11300e-02 4.46200e-02 3.65900e-02 3.55100e-02<nl> 5.05900e-02 5.73500e-02 5.18800e-02 7.15100e-02 5.66000e-02 5.30200e-02<nl> 4.68400e-02 3.93200e-02 4.20300e-02 2.87500e-02 4.29400e-02 1.22040e-01<nl> 1.15040e-01 1.20830e-01 8.18700e-02 6.86000e-02 1.48660e-01 1.14320e-01<nl> 2.28760e-01 2.11610e-01 1.39600e-01 1.32620e-01 1.71200e-01 1.31170e-01<nl> 1.28020e-01 2.63630e-01 1.07930e-01 1.00840e-01 1.23290e-01 2.22120e-01<nl> 1.42310e-01 1.71340e-01 1.31580e-01 1.50980e-01 1.30580e-01 1.44760e-01<nl> 6.89900e-02 7.16500e-02 9.29900e-02 1.50380e-01 9.84900e-02 1.69020e-01<nl> 3.87350e-01 2.59150e-01 3.25430e-01 8.81250e-01 3.40060e-01 1.19294e+00<nl> 5.90050e-01 3.29820e-01 9.76170e-01 5.57780e-01 3.22640e-01 3.52330e-01<nl> 2.49800e-01 5.44520e-01 2.90900e-01 1.62864e+00 3.32105e+00 4.09740e+00<nl> 2.77974e+00 2.37934e+00 2.15505e+00 2.36862e+00 2.33099e+00 2.73397e+00<nl> 1.65660e+00 1.49632e+00 1.12658e+00 2.14918e+00 1.41385e+00 3.53501e+00<nl> 2.44668e+00 1.22358e+00 1.34284e+00 1.42502e+00 1.27346e+00 1.46336e+00<nl> 1.83377e+00 1.51902e+00 2.24236e+00 2.92400e+00 2.01019e+00 1.80028e+00<nl> 2.30040e+00 2.44953e+00 1.20742e+00 2.31390e+00 1.39140e-01 9.17800e-02<nl> 8.44700e-02 6.66400e-02 7.02200e-02 5.42500e-02 6.64200e-02 5.78000e-02<nl> 6.58800e-02 6.88800e-02 9.10300e-02 1.00080e-01 8.30800e-02 6.04700e-02<nl> 5.60200e-02 7.87500e-02 1.25790e-01 8.37000e-02 9.06800e-02 6.91100e-02<nl> 8.66400e-02 2.18700e-02 1.43900e-02 1.38100e-02 4.01100e-02 4.66600e-02<nl> 3.76800e-02 3.15000e-02 1.77800e-02 3.44500e-02 2.17700e-02 3.51000e-02<nl> 2.00900e-02 1.36420e-01 2.29690e-01 2.51990e-01 1.35870e-01 4.35710e-01<nl> 1.74460e-01 3.75780e-01 2.17190e-01 1.40520e-01 2.89550e-01 1.98020e-01<nl> 4.56000e-02 7.01300e-02 1.10690e-01 1.14250e-01 3.58090e-01 4.07710e-01<nl> 6.23560e-01 6.14700e-01 3.15330e-01 5.26930e-01 3.82140e-01 4.12380e-01<nl> 2.98190e-01 4.41780e-01 5.37000e-01 4.62960e-01 5.75290e-01 3.31470e-01<nl> 4.47910e-01 3.30450e-01 5.20580e-01 5.11830e-01 8.24400e-02 9.25200e-02<nl> 1.13290e-01 1.06120e-01 1.02900e-01 1.27570e-01 2.06080e-01 1.91330e-01<nl> 3.39830e-01 1.96570e-01 1.64390e-01 1.90730e-01 1.40300e-01 2.14090e-01<nl> 8.22100e-02 3.68940e-01 4.81900e-02 3.54800e-02 1.53800e-02 6.11540e-01<nl> 6.63510e-01 6.56650e-01 5.40110e-01 5.34120e-01 5.20140e-01 8.25260e-01<nl> 5.50070e-01 7.61620e-01 7.85700e-01 5.78340e-01 5.40500e-01 9.06500e-02<nl> 2.99160e-01 1.62110e-01 1.14600e-01 2.21880e-01 5.64400e-02 9.60400e-02<nl> 1.04690e-01 6.12700e-02 7.97800e-02 2.10380e-01 3.57800e-02 3.70500e-02<nl> 6.12900e-02 1.50100e-02 9.06000e-03 1.09600e-02 1.96500e-02 3.87100e-02<nl> 4.59000e-02 4.29700e-02 3.50200e-02 7.88600e-02 3.61500e-02 8.26500e-02<nl> 8.19900e-02 1.29320e-01 5.37200e-02 1.41030e-01 6.46600e-02 5.56100e-02<nl> 4.41700e-02 3.53700e-02 9.26600e-02 1.00000e-01 5.51500e-02 5.47900e-02<nl> 7.50300e-02 4.93200e-02 4.92980e-01 3.49400e-01 2.63548e+00 7.90410e-01<nl> 2.61690e-01 2.69380e-01 3.69200e-01 2.53560e-01 3.18270e-01 2.45220e-01<nl> 4.02020e-01 4.75470e-01 1.67600e-01 1.81590e-01 3.51140e-01 2.83920e-01<nl> 3.41090e-01 1.91860e-01 3.03470e-01 2.41030e-01 6.61700e-02 6.72400e-02<nl> 4.54400e-02 5.02300e-02 3.46600e-02 5.08300e-02 3.73800e-02 3.96100e-02<nl> 3.42700e-02 3.04100e-02 3.30600e-02 5.49700e-02 6.15100e-02 1.30100e-02<nl> 2.49800e-02 2.54300e-02 3.04900e-02 3.11300e-02 6.16200e-02 1.87000e-02<nl> 1.50100e-02 2.89900e-02 6.21100e-02 7.95000e-02 7.24400e-02 1.70900e-02<nl> 4.30100e-02 1.06590e-01 8.98296e+00 3.84970e+00 5.20177e+00 4.26131e+00<nl> 4.54192e+00 3.83684e+00 3.67822e+00 4.22239e+00 3.47428e+00 4.55587e+00<nl> 3.69695e+00 1.35222e+01 4.89822e+00 5.66998e+00 6.53876e+00 9.23230e+00<nl> 8.26725e+00 1.11081e+01 1.84982e+01 1.96091e+01 1.52880e+01 9.82349e+00<nl> 2.36482e+01 1.78667e+01 8.89762e+01 1.58744e+01 9.18702e+00 7.99248e+00<nl> 2.00849e+01 1.68118e+01 2.43938e+01 2.25971e+01 1.43337e+01 8.15174e+00<nl> 6.96215e+00 5.29305e+00 1.15779e+01 8.64476e+00 1.33598e+01 8.71675e+00<nl> 5.87205e+00 7.67202e+00 3.83518e+01 9.91655e+00 2.50461e+01 1.42362e+01<nl> 9.59571e+00 2.48017e+01 4.15292e+01 6.79208e+01 2.07162e+01 1.19511e+01<nl> 7.40389e+00 1.44383e+01 5.11358e+01 1.40507e+01 1.88110e+01 2.86558e+01<nl> 4.57461e+01 1.80846e+01 1.08342e+01 2.59406e+01 7.35341e+01 1.18123e+01<nl> 1.10874e+01 7.02259e+00 1.20482e+01 7.05042e+00 8.79212e+00 1.58603e+01<nl> 1.22472e+01 3.76619e+01 7.36711e+00 9.33889e+00 8.49213e+00 1.00623e+01<nl> 6.44405e+00 5.58107e+00 1.39134e+01 1.11604e+01 1.44208e+01 1.51772e+01<nl> 1.36781e+01 9.39063e+00 2.20511e+01 9.72418e+00 5.66637e+00 9.96654e+00<nl> 1.28023e+01 1.06718e+01 6.28807e+00 9.92485e+00 9.32909e+00 7.52601e+00<nl> 6.71772e+00 5.44114e+00 5.09017e+00 8.24809e+00 9.51363e+00 4.75237e+00<nl> 4.66883e+00 8.20058e+00 7.75223e+00 6.80117e+00 4.81213e+00 3.69311e+00<nl> 6.65492e+00 5.82115e+00 7.83932e+00 3.16360e+00 3.77498e+00 4.42228e+00<nl> 1.55757e+01 1.30751e+01 4.34879e+00 4.03841e+00 3.56868e+00 4.64689e+00<nl> 8.05579e+00 6.39312e+00 4.87141e+00 1.50234e+01 1.02330e+01 1.43337e+01<nl> 5.82401e+00 5.70818e+00 5.73116e+00 2.81838e+00 2.37857e+00 3.67367e+00<nl> 5.69175e+00 4.83567e+00 1.50860e-01 1.83370e-01 2.07460e-01 1.05740e-01<nl> 1.11320e-01 1.73310e-01 2.79570e-01 1.78990e-01 2.89600e-01 2.68380e-01<nl> 2.39120e-01 1.77830e-01 2.24380e-01 6.26300e-02 4.52700e-02 6.07600e-02<nl> 1.09590e-01 4.74100e-02].<nl>Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.<tab>model.fit(X, y)	sklearnのfit()では、DataFrame型やnumpyの行列形式（縦ベクトル）しか使用できない<tab>二重括弧をつけるか、reshape(-1,1)をつける
+AttributeError: 'dict' object has no attribute 'add'<tab>A.add(x[2:])	dict型にaddは使用できない<tab>A[キー] = 要素でdict型に要素を追加できる
+ValueError: Expected 2D array, got 1D array instead:<nl>array=[0      0.00632<nl> 1      0.02731<nl> 2      0.02729<nl> 3      0.03237<nl> 4      0.06905<nl>         ...<nl> 501    0.06263<nl> 502    0.04527<nl> 503    0.06076<nl> 504    0.10959<nl> 505    0.04741<nl> Name: 犯罪率, Length: 506, dtype: float64 list(['犯罪率'])].<nl>Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.<tab>model.fit(X, y)	sklearnのfit()では、DataFrame型やnumpyの行列形式（縦ベクトル）しか使用できない<tab>二重括弧をつけるか、reshape(-1,1)をつける
+NameError: name 'A' is not defined<tab>for i in range(min(len(A),len(B))):	変数Aが見つからない<tab>A=...のように定義する
+"KeyError: ""['部屋巣'] not in index""<tab>X = df[['部屋巣', '低所得率']]  # 説明変数　二つ選ぶ"	データフレームdfに列'部屋巣'が見つからない<tab>列名あるいはデータフレーム名を確認して直す
+TypeError: '(['week'], ['weather'], ['temperature'])' is an invalid key<tab>X = df[['week'],['weather'],['temperature']]  # 価格以外を全て説明変数に	複数列を指定する際の個々の[]は不要<tab>df[[列名1,列名2,...]]にする
+AttributeError: 'Series' object has no attribute 'df_week'<tab>df['week'] = df['week'].fillna(df['week'].df_week)	.df_weekが違う<tab>.mean()などの数値の処理に関したメゾットにした方がいいかも。
+ValueError: could not convert string to float: '--'<tab>model.fit(X, y)	このデータはそのまま処理できない<tab>文字列を数値に変えるデータ前処理を行う
+"KeyError: ""None of [Index(['資産'], dtype='object')] are in the [columns]""<tab>X = df[['資産']]  # ひとつ選ぶ"	データフレームdfに列'資産'が見つからない<tab>列名あるいはデータフレーム名を確認して直す
+ValueError: could not convert string to float: 'なし'<tab>model.fit(X, y)	文字列を数値に変えないと処理できない<tab>文字列を数値に変えるデータ前処理を行う
+ModuleNotFoundError: No module named 'janome'<tab>from janome.tokenizer import Tokenizer	janomeという名前のモジュールが見つからない<tab>モジュールをimportする、もしくはモジュールの名前を確認する
+UsageError: Cell magic `%%atcorder` not found.<tab>get_ipython().run_cell_magic('atcorder', 'https://atcoder.jp/contests/abc233/tasks/abc233_a', 'X, Y= map(str, input().split())\nwhile X<Y:\n    X+=10')	%%atcoderのスペルが違う<tab>%%atcorderを%%atcoderに直す
+ValueError: invalid literal for int() with base 10: '##..'<tab>s=s+[list(map(int,input().split()))]	'##..'はint型に変換できない<tab>入力データを見直す
+TypeError: append() takes exactly one argument (0 given)<tab>k_l[0].append()	appendするものがない<tab>append(追加するもの)にする
+NameError: name 'df_head' is not defined<tab>df_head	データフレームdf_headが見つからない<tab>データフレーム名を確認して直すか、新たにデータフレームを作る
+ValueError: could not convert string to float: '2013-11-18'<tab>model.fit(X, y)	このデータはそのまま処理できない<tab>文字列を数値に変えるデータ前処理を行う
+ZeroDivisionError: division by zero<tab>1/0	割る数に0は使用できない<tab>割る数の値を0以外に変更する
+UsageError: Cell magic `%%aycoder` not found.<tab>get_ipython().run_cell_magic('aycoder', 'abc149_a', 'S,T=map(int,input().split())\nprint(T+S)')	%%atcoderのスペルが違う<tab>%%aycoderを%%atcoderに直す
+"ValueError: Found input variables with inconsistent numbers of samples: [500, 152]<tab>print(""MSE: "", mean_squared_error(y, y_pred))"	yとy_predのデータの個数が異なる<tab>len(データフレーム名[列名])でそれぞれのデータの個数を確認する
+NameError: name 'df_orig' is not defined<tab>df_orig.info()	データフレームdf_origが見つからない<tab>データフレーム名を確認して直すか、新たにデータフレームを作る
+TypeError: '(['犯罪率'], ['緑地'])' is an invalid key<tab>X = df[[column],[column1]] # 説明変数	複数列を指定する際の個々の[]は不要<tab>df[[列名1,列名2,...]]にする
+KeyError: 'じゅうたく価格'<tab>y = df['じゅうたく価格']	データフレームdfに列'じゅうたく価格'が見つからない<tab>列名あるいはデータフレーム名を確認して直す
+ImportError: cannot import name 'PolynomialFeatures' from 'sklearn.gaussian_process' (/usr/local/lib/python3.7/dist-packages/sklearn/gaussian_process/__init__.py)<tab>from sklearn.gaussian_process import PolynomialFeatures	import元が異なる<tab>from sklearn.preprocessing import PolynomialFeaturesでimportする
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'function'<tab>N = int(input)	()が不足している<tab>int(input())に直す
+AttributeError: 'Series' object has no attribute 'discribe'<tab>df['kcal'].discribe()	discribeのスペルが違う<tab>discribeをdescribe に直す
+KeyError: 'temprature'<tab>y = df['temprature']	データフレームdfに列'temprature'が見つからない<tab>列名あるいはデータフレーム名を確認して直す
+TypeError: '(['部屋数'], ['低所得率'])' is an invalid key<tab>X = df[['部屋数'], ['低所得率']]  # ひとつ選ぶ	複数列を指定する際の個々の[]は不要<tab>df[[列名1,列名2,...]]にする
+AttributeError: 'function' object has no attribute 'sum'<tab>df.isnull.sum()	isnullの後ろに()がない<tab>df.isnull().sum()に直す
+KeyError: 'アルコール'<tab>sns.kdeplot(df.groupby('アルコール').get_group('1')['G3'], shade = True, label = '1')	データフレームdfに列'アルコール'が見つからない<tab>列名あるいはデータフレーム名を確認して直す
+TypeError: list expected at most 1 arguments, got 2<tab>S =list(str, input())	listに型を引数として渡すことはできない<tab>入力が１つであれば、list(input())、複数であればlist(input().split())と書く
+NameError: name 'white' is not defined<tab>print(white)	変数ansgdが見つからない<tab>ansgd=...のように定義する
+KeyError: 'tempreture'<tab>plt.scatter(df['payday'], df['tempreture'])	データフレームdfに列'tempreture'が見つからない<tab>列名あるいはデータフレーム名を確認して直す
+FileNotFoundError: [Errno 2] No such file or directory: 'bento.csv'<tab>df = pd.read_csv('bento.csv')	bento.csvが見つからない<tab>ファイルのダウンロードし、ファイル名やファイルパスを確認をする
+FileNotFoundError: [Errno 2] No such file or directory: 'drive/my-drive/nuna-chan/train_Numa_print.csv'<tab>X_train_numa_p = pd.read_csv('drive/my-drive/nuna-chan/train_Numa_print.csv')	drive/my-drive/nuna-chan/train_Numa_print.csvが見つからない<tab>ファイルのダウンロードし、ファイル名やファイルパスを確認をする
+ValueError: num must be 1 <= num <= 2, not 3<tab>plt.subplot(2,1,3)	subplotで3は存在しない<tab>1から2になるようにする
+FileNotFoundError: [Errno 2] No such file or directory: 'ja.csv'<tab>df = pd.read_csv('ja.csv')	ja.csvが見つからない<tab>ファイルのダウンロードし、ファイル名やファイルパスを確認をする
+NameError: name 'GPC' is not defined<tab>GPC	変数GPCが見つからない<tab>GPC=...のように定義する
+NameError: name 'clumn' is not defined<tab>print(f'{clumn}決定係数(R2):', r2)	変数clumnが見つからない<tab>clumnを定義するまたはcolumnに直す
+NameError: name 'np' is not defined<tab>print(np.array(scores).mean())	numpyをnpとしてimportしていない<tab>import numpy as npする
+NameError: name 'C' is not defined<tab>a=[A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z]	変数Cが見つからない<tab>C=...のように定義する
+"KeyError: ""['教員'] not in index""<tab>X = df[['通勤', '教員']]  # 説明変数"	データフレームdfに列'教員'が見つからない<tab>列名あるいはデータフレーム名を確認して直す
+NameError: name 'TheilSenRegresso' is not defined<tab>model = TheilSenRegresso()	'TheilSenRegresso'のスペルが違う<tab>TheilSenRegressorする
+NameError: name 'key' is not defined<tab>data_sep(key)	変数keyが見つからない<tab>key=...のように定義する
+NameError: name 'x' is not defined<tab>a<=x<=b	変数xが見つからない<tab>x=...のように定義する
+ValueError: Input contains NaN, infinity or a value too large for dtype('float32').<tab>model.fit(X_train, y_train)	NANやinfが含まれている<tab>指定した列を確認する
+"UsageError: Cell magic `%%arcoder` not found.<tab>get_ipython().run_cell_magic('arcoder', 'https://atcoder.jp/contests/abc149/tasks/abc149_a', ""S,T=map(str, input().split())\nprint(f'{S}{T}')"")"	%%atcoderのスペルが違う<tab>%%arcoderを%%atcoderに直す
+NameError: name 'Series' is not defined<tab>for key in Series:	Seriesが見つからない<tab>Seriesを定義する
+NameError: name 'o' is not defined<tab>o	変数oが見つからない<tab>o=...のように定義する
+TypeError: 'float' object cannot be interpreted as an integer<tab>for _ in range(num):	numはfloat型なため使用できない<tab>numの型を見直して、定義する
+TypeError: '(['kcal'], ['temperature'])' is an invalid key<tab>X = df[['kcal'],['temperature']]  # 価格以外を全て説明変数に	複数列を指定する際の個々の[]は不要<tab>df[[列名1,列名2,...]]にする
+NameError: name 'G3' is not defined<tab>df.groupby('兄弟姉妹')[G3].describe()	変数G3が見つからない<tab>G3=...のように定義する
+TypeError: '(['week'], ['weather'], ['kcal'])' is an invalid key<tab>X = df[['week'],['weather'],['kcal']]	複数列を指定する際の個々の[]は不要<tab>df[[列名1,列名2,...]]にする
+ValueError: Input contains NaN, infinity or a value too large for dtype('float64').<tab>model.fit(X_train, y_train)	NANやinfが含まれている<tab>指定した列を確認する
+ValueError: invalid literal for int() with base 10: '123,112'<tab>A,B=map(int, input().split())	区切り文字の設定が','になっていない<tab>map(int,input().split())をmap(int,input().split(','))に直す
+NameError: name 'r2_score' is not defined<tab>r2 = r2_score(y, y_pred)	scikit-learnの関数r2_scoreが見つからない<tab>from sklearn.metrics import r2_score する
+"TypeError: can only concatenate str (not ""list"") to str<tab>ss[i]=ss[i]+[s[i+j]]"	文字列とリストの演算はできない<tab>型を揃えて演算する
+NameError: name 'colum' is not defined<tab>print(colum)	変数columが見つからない<tab>colum=...のように定義する
+AttributeError: 'DataFrame' object has no attribute 'column'<tab>for column2 in df.column[:-1]:	データフレームには'column'という要素はない<tab>df.column[:-1]:をdf.columns[:-1]:に直す
+NameError: name 'index_datetime' is not defined<tab>df=index_datetime	index_datetimeが見つからない<tab>index_datetime=...のように定義する
+AttributeError: 'DecisionTreeRegressor' object has no attribute 'feature_importences_'<tab>model.feature_importences_	importances_のスペルが違う<tab>importences_をimportances_に直す
+"KeyError: ""['rewarks'] not found in axis""<tab>df.drop('rewarks', axis=1, inplace=True)"	rewarksはタイプミス<tab>remarksに直す
+NameError: name 't' is not defined<tab>if x[i]==t[i]:	リストtが見つからない<tab>tを定義する
+NameError: name 'prit' is not defined<tab>prit(a,c)	printのスペルが違う<tab>printに直す
+UsageError: Line magic function `%kogi` not found.<tab>get_ipython().magic('kogi https://atcoder.jp/contests/abc226/tasks/abc226_c')	%が一つしかない<tab>%% atcoder URLにする
+TypeError: 'builtin_function_or_method' object is not subscriptable<tab>x = np.array[1,2,2,4,6,7]	()が不足している<tab>np.array(リスト)にする
+KeyError: 1<tab>keys_list(df_key['keys'][1])	indexが見つからない<tab>範囲を確認し、indexを調節する
+FileNotFoundError: [Errno 2] No such file or directory: 'drive/MyDrive/numa-chan/train_Numa_print.csv'<tab>X_train_numa_p = pd.read_csv('drive/MyDrive/numa-chan/train_Numa_print.csv')	drive/MyDrive/numa-chan/train_Numa_print.csv見つからない<tab>ファイルのダウンロードし、ファイル名やファイルパスを確認をする
+TypeError: cannot unpack non-iterable int object<tab>n, j = 0	2つの変数に対して、1つの値しかない<tab>nとjのそれぞれの値を代入する
+NameError: name 'train' is not defined<tab>train['week'].value_counts()	データフレームtrainが見つからない<tab>データフレーム名を確認して直すか、新たにデータフレームを作る
+KeyError: '犯罪'<tab>X = df['犯罪']  # ひとつ選ぶ	データフレームdfに列'犯罪'が見つからない<tab>列名あるいはデータフレーム名を確認して直す
+"KeyError: ""None of [Index(['学校'], dtype='object')] are in the [columns]""<tab>X=df[['学校']]"	データフレームdfに列'学校'が見つからない<tab>列名あるいはデータフレーム名を確認して直す
+ValueError: With n_samples=0, test_size=0.3 and train_size=None, the resulting train set will be empty. Adjust any of the aforementioned parameters.<tab>X_train_all_name, X_test_all_name = train_test_split(df_all_name,test_size = 0.3)	データの読み込みができていない<tab>データを読み込んでいるコードを確認する
+NameError: name 'r2_scpre' is not defined<tab>r2 = r2_scpre(y, y_pred)	scoreのスペルが違う<tab>scoreに直す
+ValueError: Expected 2D array, got 1D array instead:<nl>array=[-1].<nl>Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.<tab>model.fit(x, y)	sklearnのfit()では、DataFrame型やnumpyの行列形式（縦ベクトル）しか使用できない<tab>二重括弧をつけるか、reshape(-1,1)をつける
+ValueError: invalid literal for int() with base 10: '80 94'<tab>X=int(input())	複数の入力データを読み込めない<tab>map(int,input().split())に直す
+ValueError: invalid literal for int() with base 10: '7,acr'<tab>K,S=map(int, input().split())	'7,acr'はint型に変換できない<tab>map(int,input().split())をmap(input().split(','))に直す
+ValueError: Expected 2D array, got scalar array instead:<nl>array=<bound method Series.map of 0      月<nl>1      火<nl>2      水<nl>3      木<nl>4      金<nl>      ..<nl>202    水<nl>203    木<nl>204    金<nl>205    月<nl>206    火<nl>Name: week, Length: 207, dtype: object>.<nl>Reshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample.<tab>model.fit(X, y)	sklearnのfit()では、DataFrame型やnumpyの行列形式（縦ベクトル）しか使用できない<tab>二重括弧をつけるか、reshape(-1,1)をつける
+NameError: name 'inbt' is not defined<tab>sx,sy,gx,gy = map(inbt,input().strip().split())	intのスペルが違う<tab>intに直す
+KeyError: ('通勤', '教員比')<tab>X = df['通勤','教員比']	カラム名は1つしか指定できない<tab>2つ以上のカラムを取り出したい時には、二重括弧を使う
+NameError: name 'y_pred' is not defined<tab>print(y_pred)	変数y_predが見つからない<tab>y_pred=...のように定義する
+ValueError: invalid literal for int() with base 10: 'tanaka'<tab>s,t=map(int,input().split())	文字列'tanaka'はint型に変換できない<tab>map(int,input().split())をmap(input().split())に直す
+AttributeError: 'DecisionTreeRegressor' object has no attribute 'feature_importance'<tab>model.feature_importance	featureとimportances_のスペルが違う<tab>featrueをfeatureに、importanceをimportances_に直す
+ValueError: invalid literal for int() with base 10: ' '<tab>n,m=map(int,input())	map関数を用いているが入力データが1つしかない<tab>2つの値を入力する
+KeyError: '住宅価格'<tab>y = df['住宅価格']	データフレームdfに列'住宅価格'が見つからない<tab>列名あるいはデータフレーム名を確認して直す
+TypeError: __init__() got an unexpected keyword argument 'figsiza'<tab>plt.figure(figsiza = (6,6))	figureではグラフのサイズを指定できない<tab>plt.figure(figsize=...)に直す
+ValueError: invalid literal for int() with base 10: '5 3 20 15'<tab>N,A,X,Y=int(input())	'5 3 20 15'はint型に変換できない<tab>int(input())をmap(int,input().split())に直す
+TypeError: max expected 1 arguments, got 0<tab>bb=b[b.index[max()]]	max()の引数がない<tab>max()に引数を与える
+NameError: name 'floar' is not defined<tab>x = floar(input())	floatのスペルが違う<tab>floatに直す
+FileNotFoundError: [Errno 2] No such file or directory: '/drive/my-drive/nuna-chan/train_Numa_print.csv'<tab>X_train_numa_p = pd.read_csv('/drive/my-drive/nuna-chan/train_Numa_print.csv')	/drive/my-drive/nuna-chan/train_Numa_print.csvが見つからない<tab>ファイルのダウンロードし、ファイル名やファイルパスを確認をする
+ValueError: empty separator<tab>str(223).split('')	区切り文字が指定されていない<tab>空白区切りにするなら、.split(' ')のように空白を区切り文字として指定する
+"KeyError: ""['datetime'] not found in axis""<tab>df.drop('datetime', axis=1, inplace=True)"	データフレームdfにdatetime列が見つからない<tab>データフレームまたは列名を見直す
+ValueError: operands could not be broadcast together with shapes (165,) (42,) <tab>pred_sub = y - y_pred_L	yとy_pred_Lのデータの個数が異なる<tab>データの個数を揃えてから、演算する
+TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'<tab>x=A**b	Aが文字列型になっている<tab>Aの型を数値型にする
+TypeError: bad operand type for unary +: 'str'<tab>print(s[k-1],+'...')	文字列を連結する際に,がある<tab>print(文字列1+文字列2)のようにする
+NameError: name 'plt' is not defined<tab>plt.scatter(df['部屋数'], df['住宅価格'])	matplotlibがimportしていない<tab>import matplotlib.pyplot as pltでpltとしてimportする
+TypeError: must be real number, not function<tab>print(ceil(a))	mathモジュールを使っていない<tab>import mathして、math.ceil()と書く
+"KeyError: ""['weather_num', 'tempreture'] not in index""<tab>df[['kcal','weather_num','tempreture']]"	データフレームdfに列'weather_num', 'tempreture'が見つからない<tab>列名あるいはデータフレーム名を確認して直す
+NameError: name 'k_l' is not defined<tab>sample_list = k_l	変数k_lが見つからない<tab>k_l=...のように定義する
+AttributeError: 'DecisionTreeRegressor' object has no attribute 'DecisionTreeRegressor'<tab>plt.barh(X_train.columns[:-1], model.DecisionTreeRegressor)	DecisionTreeRegressorの()が不足している<tab>DecisionTreeRegressor()を付ける
+"ValueError: 'H' is not in list<tab>if mylist.index(""H"")==1 and mylist.index(""HR"")==1 and mylist.index(""2B"")==1:"	H'はリストに存在しない<tab>リストの中身を見直す
+ValueError: invalid literal for int() with base 10: '2]'<tab>Sx,Sy,Gx,Gy=map(int, input().split())	入力データに文字列が含まれている<tab>入力データを見直しましょう
+NameError: name 'SS' is not defined<tab>print(SS)	変数SSが見つからない<tab>SS=...のように定義する
+ValueError: not enough values to unpack (expected 2, got 1)<tab>A,B=map(int,input().split())	入力した値を入れる変数は2個あるけど、実際には1個しか入力されていない<tab>入力を2個に増やすか、変数を1個に減らそう
+TypeError: float() argument must be a string or a number, not 'list'<tab>x=float(input().split())	1つの変数に対してsplit()は不要<tab>入力に合うようにリストにするまたはsplit()を無くす
+KeyError: 'tempoture'<tab>X = df['tempoture'] #一つ選ぶ	データフレームdfに列'tempoture'が見つからない<tab>列名あるいはデータフレーム名を確認して直す
+KeyError: 'neme'<tab>df.head(df['neme'])	データフレームdfに列'name'が見つからない<tab>列名あるいはデータフレーム名を確認して直す
+NameError: name 'DecisionTreeRegressor' is not defined<tab>model = DecisionTreeRegressor()	DecisionTreeRegressorが見つからない<tab>from sklearn.tree import DecisionTreeRegressorしてDecisionTreeRegressorと書く
+AttributeError: 'str' object has no attribute 'remove'<tab>N=S.remove(0,2)	Sは文字列のためremoveできない<tab>S.strip('取り除く文字列')にする
+AttributeError: 'LinearRegression' object has no attribute 'predect'<tab>y_pred = model.predect(X)	predictのスペルが違う<tab>predectをpredictに直す
+NameError: name 'df_uid_mean1_c1' is not defined<tab>df_uid_mean1_c1	データフレームdf_uid_mean1_c1が見つからない<tab>データフレーム名を確認して直すか、新たにデータフレームを作る
+AttributeError: 'str' object attribute 'replace' is read-only<tab>S.replace=(S[1],S[2])	リストの番号で指定できない<tab>S = [S[1],S[0]] + S[2:] に直す
+KeyError: 'target'<tab>y = df['target']	データフレームdfに列'target'が見つからない<tab>列名あるいはデータフレーム名を確認して直す
+TypeError: __init__() got an unexpected keyword argument 'figure'<tab>plt.figure(figure=(6,6))	figureではグラフのサイズを指定できない<tab>plt.figure(figsize=...)に直す
+NameError: name 'Lineararegression' is not defined<tab>model=Lineararegression()	LinearRegressionのスペルが違う<tab>LineararegressionをLinearRegressionに直す
+NameError: name 'words' is not defined<tab>vec = model.fit_transform(words)	変数wordsが見つからない<tab>words=...のように定義する
+NameError: name 'ptint' is not defined<tab>ptint(0)	printのスペルが違う<tab>printに直す
+AttributeError: 'str' object has no attribute 'sprit'<tab>a = input().sprit()	splitのスペルが違う<tab>splitに直す
+"KeyError: ""['交通「'] not in index""<tab>X = df[['部屋数','低所得率','交通「']]"	データフレームdfに列'交通「'が見つからない<tab>列名あるいはデータフレーム名を確認して直す
+AttributeError: type object 'list' has no attribute 'input'<tab>x=list.input()	listの使い方が違う<tab>list(input())に直す
+AttributeError: 'DataFrame' object has no attribute 'unique'<tab>df.unique()	列名が指定されていない<tab>df['列名'].unique()
+AttributeError: 'DecisionTreeRegressor' object has no attribute 'featrue_importances_'<tab>model.featrue_importances_	featureのスペルが違う<tab>featrueをfeatureに直す
+TypeError: '(['week'], ['weathere'], ['kcal'])' is an invalid key<tab>X = df[['week'],['weathere'],['kcal']]	複数列を指定する際の個々の[]は不要<tab>df[[列名1,列名2,...]]にする
+TypeError: __init__() got an unexpected keyword argument 'max_depth'<tab>model = LinearRegression(max_depth=3)	LinearRegressionではmax_depthを使用できない<tab>モデルの見直しをする
+NameError: name 'cross_val_score' is not defined<tab>cross_val_score(モデル, X, y, cv=5, scoring='r2')	cross_val_scoreをimportしていない<tab>from sklearn.model_selection import cross_val_scoreする
